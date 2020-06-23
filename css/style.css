@@ -1,0 +1,66 @@
+/* STILI GENERALI */
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+/* NAVBAR */
+.navbar {
+    height: 70px;
+    line-height: 65px;
+    background-color: white;
+    box-shadow: 0px 2px 4px rgba(3,27,78,0.1);
+}
+
+.navbar-header img {
+    height: 30px;
+}
+
+.navbar-nav {
+    color: hsl(221,93%,16%);
+    line-height: 75px;
+    margin: 0 50px;
+}
+
+ul.navbar-nav li.az_dropdown {
+    padding: 0 10px;
+    font-weight: 500;
+}
+
+ul.navbar-nav li.az_dropdown:hover {
+    color: #006aff;
+}
+
+.navbar-nav > li > a {
+    line-height: 45px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: 500;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+    color: #006aff;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: hsl(221,93%,16%);
+}
+
+.navbar-right {
+    margin: 0;
+}
+
+.navbar-right a {
+    color: #006aff;
+}
+
+.btn-default {
+    vertical-align: baseline;
+    font-weight: 700;
+    border: 1px solid #006aff;
+    transition: background-color 0.25s linear, border-color 0.25s linear, color 0.25s linear;
+}
+
+.btn-default:hover {
+    background-color: #006aff;
+    border-color: #006aff;
+    color: white;
+}
