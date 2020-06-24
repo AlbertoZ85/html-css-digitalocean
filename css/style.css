@@ -1,7 +1,18 @@
-/* STILI GENERALI */
+/* GENERAL STYLES & TYPOGRAPHY*/
 body {
     font-family: 'Montserrat', sans-serif;
 }
+
+h1 {
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+h2, h5 {
+    color: #031b4e;
+}
+
 /* NAVBAR */
 .navbar {
     height: 70px;
@@ -17,7 +28,7 @@ body {
 .navbar-nav {
     color: hsl(221,93%,16%);
     line-height: 75px;
-    margin: 0 50px;
+    margin-left: 50px;
 }
 
 ul.navbar-nav li.az_dropdown {
@@ -63,4 +74,198 @@ ul.navbar-nav li.az_dropdown:hover {
     background-color: #006aff;
     border-color: #006aff;
     color: white;
+}
+
+/* HAMBURGER */
+.navbar-header button {
+    border: none;
+    margin-top: 17.5px;
+}
+
+.navbar-default .navbar-toggle:hover {
+    background-color: transparent;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #5b6987;
+}
+
+/* HEADING */
+#heading {
+    background-color: #0069ff;
+    background-image: url('https://www.digitalocean.com/static/bg-home-hero-3-bb4b33b77274db09b969f629ad81c4d5.svg');
+    background-size: cover;
+    background-position: center;
+    margin-top: 70px;
+    padding: 10em 0;
+    /* height: 800px; */
+}
+
+/* BANNER */
+#banner {
+    color: white;
+    padding: 7.5em 0;
+}
+
+#banner p {
+    font-size: 25px;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+/* JUMBOTRON */
+.az_jumbotron {
+    background-color: white;
+    border-radius: 6px;
+    position: relative;
+}
+
+.az_jumbotron.col-md-4 {
+    padding: 0;
+}
+
+.deploy {
+    padding: 20px 0;
+    background-color: #f3f5f9;
+    border-radius: 6px 6px 0 0;
+}
+
+.deploy h5 {
+    font-size: 17.5px;
+    font-weight: 700;
+    margin: 0;
+}
+
+form {
+    padding: 30px;
+}
+
+.form-control {
+    padding: 25px 15px 25px 15px;
+}
+
+form button.btn {
+    width: 100%;
+    padding: 15px 0;
+    font-size: 17.5px;
+    font-weight: 700;
+    background-color: #0069ff;
+}
+
+#signup-email-btn:hover {
+    background-color: #0069ff;
+}
+
+.signup-social {
+    padding: 30px;
+    border-top: 1px solid #f3f5f9;
+}
+
+.signup-social button {
+    height: 50px;
+    padding: 15px 0;
+    background-color: white;
+    color: #0069ff;
+    border: 1px solid #0069ff;
+}
+
+#signup-google-btn {
+    width: 80%;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+#signup-google-btn img {
+    transform: translateY(-4px);
+}
+
+#signup-google-btn:hover,
+#github-btn:hover {
+    border-color: #5b6886;
+    color: #363636;
+    background-color: transparent;
+}
+
+#github-btn {
+    width: 15%;
+    position: absolute;
+    right: 30px;
+}
+
+#github-btn img {
+    transform: translateY(-2px);
+}
+
+#banner-right p {
+    color: white;
+    margin: 10px 0;
+    font-size: 11px;
+}
+
+#banner-right p a {
+    color: white;
+}
+
+
+/* MQ */
+/* COLLAPSE NAVBAR AT 992px INSTEAD OF 768px */
+@media (max-width: 991px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-left,.navbar-right {
+        float: none !important;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-fixed-top {
+        top: 0;
+        border-width: 0 0 1px;
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin-top: 7.5px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .collapse.in{
+        display:block !important;
+    }
+    nav .container {
+        width: 100%;
+    }
+    .navbar-toggle {
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    #signup-google-btn {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    #heading {
+        padding: 5em 0;
+    }
+
+    #banner {
+        text-align: center;
+        padding-top: 0;
+        padding-bottom: 2.5em;
+    }
 }
