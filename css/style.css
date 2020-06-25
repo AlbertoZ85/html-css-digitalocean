@@ -3,6 +3,11 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+section {
+    padding: 5em 0;
+    color: #5b6987;
+}
+
 h1 {
     font-size: 60px;
     font-weight: 700;
@@ -19,6 +24,10 @@ p {
     line-height: 1.6;
 }
 
+a:hover {
+    text-decoration: none;
+}
+
 a.az_anchor {
     margin-top: 40px;
     font-size: 16px;
@@ -28,7 +37,6 @@ a.az_anchor {
 
 a.az_anchor:hover {
     color: #1633ff;
-    text-decoration: none;
 }
 
 a.az_anchor::after {
@@ -51,14 +59,18 @@ a.az_anchor::after {
 
 #aside-cards, #business {
     background-color: white;
-    padding: 4em 0;
-    color: #5b6987;
 }
 
 #brands, #developers {
     background-color: #f3f5f9;
-    padding: 4em 0;
-    color: #5b6987;
+}
+
+#bandwidth {
+    background-color: #031b4e;
+    background-image: url('https://images.prismic.io/www-static/bb563ec9-49ef-4ceb-8468-da84f1509fcc_bg-map-solid.svg?auto=compress,format');
+    background-size: cover;
+    background-position: center;
+    color: white;
 }
 
 .az_max-width {
@@ -87,6 +99,10 @@ a.az_anchor::after {
     color: hsl(221,93%,16%);
     line-height: 75px;
     margin-left: 50px;
+}
+
+.navbar-nav li:hover {
+    cursor: pointer;
 }
 
 ul.navbar-nav li.az_dropdown {
@@ -256,6 +272,10 @@ form button.btn {
     color: white;
 }
 
+#banner-right p a:hover {
+    text-decoration: underline;
+}
+
 /* BRANDS */
 #brands h6 {
     font-size: 16px;
@@ -345,6 +365,67 @@ p.caption {
 #business h5 {
     font-size: 17px;
     margin: 30px 0;
+}
+
+/* BANDWIDTH */
+#bandwidth h2 {
+    color: white;
+}
+
+#bandwidth p a {
+    font-weight: 500;
+    color: #0069ff;
+}
+
+#bandwidth p a:hover {
+    color: #1633ff;
+}
+
+.code, .city, .test-speed {
+    line-height: 30px;
+}
+
+.code {
+    float: left;
+    width: 70px;
+    font-weight: 700;
+}
+
+.city {
+    float: left;
+    margin: 0;
+    font-size: 12px;
+    font-weight: 500;
+    color: white;
+    opacity: 0.6;
+}
+
+a.test-speed {
+    float: right;
+    font-weight: 500;
+    color: #00d7d2;
+}
+
+a.test-speed:hover {
+    color: #1633ff;
+}
+
+a.test-speed::after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: '\f054';
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+.az_pad-bor {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid hsla(0,0%,100%,0.2);
+}
+
+.az_pad-bor:last-of-type {
+    border: none;
 }
 
 /* MEDIA QUERIES */
@@ -480,6 +561,14 @@ p.caption {
 
     #business p {
         height: 160px;
-        margin-bottom: 40px;
+        margin-bottom: 35px;
+    }
+    /* BANDWIDTH BORDERS */
+    .az_pad-bor:last-of-type {
+        border-bottom: 1px solid hsla(0,0%,100%,0.2);
+    }
+
+    .az_pad-bor:nth-last-of-type(2) {
+        border-bottom: opacity: 1;
     }
 }
