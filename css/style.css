@@ -19,6 +19,26 @@ p {
     line-height: 1.6;
 }
 
+a.az_anchor {
+    margin-top: 40px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #006aff;
+}
+
+a.az_anchor:hover {
+    color: #1633ff;
+    text-decoration: none;
+}
+
+a.az_anchor::after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: '\f054';
+    font-size: 12px;
+    margin-left: 5px;
+}
+
 #heading {
     background-color: #0069ff;
     background-image: url('https://www.digitalocean.com/static/bg-home-hero-3-bb4b33b77274db09b969f629ad81c4d5.svg');
@@ -29,7 +49,7 @@ p {
     /* height: 800px; */
 }
 
-#aside-cards {
+#aside-cards, #business {
     background-color: white;
     padding: 4em 0;
     color: #5b6987;
@@ -41,12 +61,12 @@ p {
     color: #5b6987;
 }
 
-.section-heading {
+.az_max-width {
     max-width: 770px;
     margin: 0 auto 70px;
 }
 
-.section-heading p {
+.az_max-width p {
     font-size: 18px;
     margin-top: 20px;
 }
@@ -243,26 +263,6 @@ form button.btn {
     margin-bottom: 40px;
 }
 
-#brands a {
-    margin-top: 40px;
-    font-size: 16px;
-    font-weight: 500;
-    color: #006aff;
-}
-
-#brands a:hover {
-    color: #1633ff;
-    text-decoration: none;
-}
-
-#brands a::after {
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    content: '\f054';
-    font-size: 12px;
-    margin-left: 5px;
-}
-
 #brands .row {
     margin-bottom: 40px;
 }
@@ -306,7 +306,7 @@ hr.az_hr {
 
 #aside-cards .row p {
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 500;
     margin-bottom: 50px;
 }
 
@@ -328,6 +328,23 @@ p.caption {
     font-size: 10px;
     color: #0069ff;
     cursor: pointer;
+}
+
+/* BUSINESS */
+#business p {
+    max-width: 770px;
+    margin-bottom: 25px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+#business img {
+    margin-top: 50px;
+}
+
+#business h5 {
+    font-size: 17px;
+    margin: 30px 0;
 }
 
 /* MEDIA QUERIES */
@@ -427,6 +444,7 @@ p.caption {
 }
 
 @media screen and (min-width: 992px) {
+    /* CAROUSEL ARROWS VISIBLE */
     #developers .carousel-img {
         position: relative;
     }
@@ -450,5 +468,18 @@ p.caption {
         content: '\f061';
         left: 100%;
         color: #3f5179;
+    }
+    /* BUSINESS TEXT-ALIGN */
+    #business:not(#business h2) {
+        text-align: left;
+    }
+
+    #business h5 {
+        height: 45px;
+    }
+
+    #business p {
+        height: 160px;
+        margin-bottom: 40px;
     }
 }
