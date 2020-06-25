@@ -61,13 +61,21 @@ a.az_anchor::after {
     background-color: white;
 }
 
-#brands, #developers {
+#brands, #developers, #dev-teams {
     background-color: #f3f5f9;
 }
 
 #bandwidth {
     background-color: #031b4e;
     background-image: url('https://images.prismic.io/www-static/bb563ec9-49ef-4ceb-8468-da84f1509fcc_bg-map-solid.svg?auto=compress,format');
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+#create-account {
+    background-color: #0069ff;
+    background-image: url('https://images.prismic.io/www-static/b4ba92a9-0956-484b-9a3f-68ef4d550fd4_bg-home-cta.svg?auto=compress,format');
     background-size: cover;
     background-position: center;
     color: white;
@@ -279,7 +287,7 @@ form button.btn {
 /* BRANDS */
 #brands h6 {
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 700;
     margin-bottom: 40px;
 }
 
@@ -402,6 +410,7 @@ p.caption {
 
 a.test-speed {
     float: right;
+    font-size: 12px;
     font-weight: 500;
     color: #00d7d2;
 }
@@ -426,6 +435,91 @@ a.test-speed::after {
 
 .az_pad-bor:last-of-type {
     border: none;
+}
+
+/* DEVELOPMENT TEAMS */
+#dev-teams p a {
+    font-weight: 500;
+    color: #0069ff;
+}
+
+#dev-teams p a:hover {
+    color: #1633ff;
+}
+
+#dev-teams img {
+    width: 200px;
+}
+
+.box {
+    background-color: white;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(1,14,40,0.05);
+}
+
+.box p:first-of-type {
+    width: 85%;
+    font-size: 23px;
+    margin: 30px auto;
+}
+
+.box p:first-of-type::before {
+    content: '\f10d';
+    font-family: "Font Awesome 5 Free";
+    font-size: 20px;
+    font-weight: 900;
+    margin-right: 8px;
+    color: #c0c6d2;
+}
+
+.box p:first-of-type::after {
+    content: '\f10e';
+    font-family: "Font Awesome 5 Free";
+    font-size: 8px;
+    font-weight: 900;
+    margin-left: 8px;
+    color: #c0c6d2;
+}
+
+.box p:nth-of-type(2) {
+    font-weight: 500;
+}
+
+.box p:nth-of-type(3) {
+    font-size: 12px;
+}
+
+#dev-teams .carousel-slideshow {
+    margin-top: 50px;
+}
+
+/* CREATE ACCOUNT */
+#create-account {
+    padding-top: 2em;
+}
+
+#create-account h2 {
+    color: white;
+    font-size: 35px;
+    line-height: 62px;
+    margin-bottom: 30px;
+}
+
+.btn-account {
+    padding: 20px 30px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #0069ff;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.btn-account:hover {
+    color: #0069ff;
+    background-color: rgba(225,225,225,0.9);
+    transition: all 0.3s ease;
 }
 
 /* MEDIA QUERIES */
@@ -498,7 +592,7 @@ a.test-speed::after {
     /* ASIDE NAVBAR FIXING */
     #aside-cards button {
         display: block;
-        text-align: left;
+        border-left: 3px solid #eee;
     }
 
     #aside-cards .row {
@@ -513,11 +607,11 @@ a.test-speed::after {
         display: none;
     }
 
-    .buttons button {
+    #aside-cards button {
         padding: 15px 20px;
     }
 
-    .buttons button.az_btn-active {
+    #aside-cards button.az_btn-active {
         border-bottom: none;
         border-left: 3px solid #0069ff;
         padding-left: 15px;
@@ -526,28 +620,29 @@ a.test-speed::after {
 
 @media screen and (min-width: 992px) {
     /* CAROUSEL ARROWS VISIBLE */
-    #developers .carousel-img {
+    .carousel-img {
         position: relative;
     }
 
-    #developers .carousel-img::before,
-    #developers .carousel-img::after {
+    .carousel-img::before,
+    .carousel-img::after {
         position: absolute;
         top: 50%;
+        transform: translateY(-50%);
         font-family: "Font Awesome 5 Free";
         font-weight: 900;
         font-size: 20px;
     }
 
-    #developers .carousel-img::before {
+    .carousel-img::before {
         content: '\f060';
-        right: 100%;
+        left: 0;
         color: #7a87a3;
     }
 
-    #developers .carousel-img::after {
+    .carousel-img::after {
         content: '\f061';
-        left: 100%;
+        right: 0;
         color: #3f5179;
     }
     /* BUSINESS TEXT-ALIGN */
@@ -570,5 +665,18 @@ a.test-speed::after {
 
     .az_pad-bor:nth-last-of-type(2) {
         border-bottom: opacity: 1;
+    }
+    /* #create-account FIXING */
+    #create-account {
+        padding-top: 5em;
+    }
+
+    #create-account h2 {
+        float: left;
+        margin: 0;
+    }
+
+    .btn-account {
+        float: right;
     }
 }
