@@ -11,6 +11,28 @@ h1 {
 
 h2, h5 {
     color: #031b4e;
+    font-weight: 700;
+}
+
+p {
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+#heading {
+    background-color: #0069ff;
+    background-image: url('https://www.digitalocean.com/static/bg-home-hero-3-bb4b33b77274db09b969f629ad81c4d5.svg');
+    background-size: cover;
+    background-position: center;
+    margin-top: 70px;
+    padding: 10em 0;
+    /* height: 800px; */
+}
+
+#aside-cards {
+    background-color: white;
+    padding: 2.5em 0;
+    color: #5b6987;
 }
 
 /* NAVBAR */
@@ -90,17 +112,6 @@ ul.navbar-nav li.az_dropdown:hover {
     background-color: #5b6987;
 }
 
-/* HEADING */
-#heading {
-    background-color: #0069ff;
-    background-image: url('https://www.digitalocean.com/static/bg-home-hero-3-bb4b33b77274db09b969f629ad81c4d5.svg');
-    background-size: cover;
-    background-position: center;
-    margin-top: 70px;
-    padding: 10em 0;
-    /* height: 800px; */
-}
-
 /* BANNER */
 #banner {
     color: white;
@@ -109,8 +120,6 @@ ul.navbar-nav li.az_dropdown:hover {
 
 #banner p {
     font-size: 25px;
-    font-weight: 300;
-    line-height: 1.6;
 }
 
 /* JUMBOTRON */
@@ -132,7 +141,6 @@ ul.navbar-nav li.az_dropdown:hover {
 
 .deploy h5 {
     font-size: 17.5px;
-    font-weight: 700;
     margin: 0;
 }
 
@@ -206,10 +214,61 @@ form button.btn {
     color: white;
 }
 
+/* ASIDE + CARDS */
+.aside-cards-heading {
+    max-width: 770px;
+    margin: 0 auto 70px;
+}
 
-/* MQ */
-/* COLLAPSE NAVBAR AT 992px INSTEAD OF 768px */
-@media (max-width: 991px) {
+.aside-cards-heading p {
+    font-size: 18px;
+}
+
+#aside-cards .row {
+    margin-top: 70px;
+}
+
+.buttons {
+    text-align: center;
+}
+
+.buttons button {
+    background: none;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10px 20px;
+}
+
+.buttons button.az_btn-active {
+    color: #031b4e;
+    font-weight: 500;
+    border-bottom: 3px solid #0069ff;
+    position: relative;
+    z-index: 1;
+}
+
+hr.az_hr {
+    width: 65%;
+    margin: 0 auto;
+    border-top: 3px solid #eee;
+    transform: translateY(-3px);
+}
+
+#aside-cards h5 {
+    font-size: 17px;
+    margin-top: 20px;
+}
+
+#aside-cards .row p {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 50px;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 991px) {
+    /* COLLAPSE NAVBAR AT 992px INSTEAD OF 768px */
     .navbar-header {
         float: none;
     }
@@ -250,15 +309,11 @@ form button.btn {
     .navbar-toggle {
         margin-right: 0;
     }
-}
-
-@media screen and (max-width: 1199px) {
-    #signup-google-btn {
-        font-size: 13px;
+    nav {
+        padding-left: 15px;
+        padding-right: 15px;
     }
-}
-
-@media screen and (max-width: 991px) {
+    /* PADDING */
     #heading {
         padding: 5em 0;
     }
@@ -267,5 +322,40 @@ form button.btn {
         text-align: center;
         padding-top: 0;
         padding-bottom: 2.5em;
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    #signup-google-btn {
+        font-size: 13px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #aside-cards button {
+        display: block;
+        text-align: left;
+    }
+
+    #aside-cards .row {
+        text-align: left;
+    }
+
+    #aside-cards .row.m_0 {
+        margin-top: 0;
+    }
+
+    hr.az_hr {
+        display: none;
+    }
+
+    .buttons button {
+        padding: 15px 20px;
+    }
+
+    .buttons button.az_btn-active {
+        border-bottom: none;
+        border-left: 3px solid #0069ff;
+        padding-left: 15px;
     }
 }
