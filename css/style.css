@@ -35,10 +35,20 @@ p {
     color: #5b6987;
 }
 
-#brands {
+#brands, #developers {
     background-color: #f3f5f9;
     padding: 4em 0;
     color: #5b6987;
+}
+
+.section-heading {
+    max-width: 770px;
+    margin: 0 auto 70px;
+}
+
+.section-heading p {
+    font-size: 18px;
+    margin-top: 20px;
 }
 
 /* NAVBAR */
@@ -240,6 +250,11 @@ form button.btn {
     color: #006aff;
 }
 
+#brands a:hover {
+    color: #1633ff;
+    text-decoration: none;
+}
+
 #brands a::after {
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
@@ -253,15 +268,6 @@ form button.btn {
 }
 
 /* ASIDE + CARDS */
-.aside-cards-heading {
-    max-width: 770px;
-    margin: 0 auto 70px;
-}
-
-.aside-cards-heading p {
-    font-size: 18px;
-}
-
 #aside-cards .row {
     margin-top: 70px;
 }
@@ -302,6 +308,26 @@ hr.az_hr {
     font-size: 16px;
     font-weight: 400;
     margin-bottom: 50px;
+}
+
+/* DEVELOPERS */
+#developers img {
+    width: 80%;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(3,27,78,0.06);
+}
+
+p.caption {
+    width: 70%;
+    margin: 20px auto;
+    font-weight: 500;
+}
+
+.carousel-slideshow i {
+    padding: 0 3px;
+    font-size: 10px;
+    color: #0069ff;
+    cursor: pointer;
 }
 
 /* MEDIA QUERIES */
@@ -351,7 +377,7 @@ hr.az_hr {
         padding-left: 15px;
         padding-right: 15px;
     }
-    /* PADDING */
+    /* PADDING FIXING ON BANNER */
     #heading {
         padding: 5em 0;
     }
@@ -364,12 +390,14 @@ hr.az_hr {
 }
 
 @media screen and (max-width: 1199px) {
+    /* RESCALING FONT SIZE */
     #signup-google-btn {
         font-size: 13px;
     }
 }
 
 @media screen and (min-width: 768px) {
+    /* ASIDE NAVBAR FIXING */
     #aside-cards button {
         display: block;
         text-align: left;
@@ -395,5 +423,32 @@ hr.az_hr {
         border-bottom: none;
         border-left: 3px solid #0069ff;
         padding-left: 15px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    #developers .carousel-img {
+        position: relative;
+    }
+
+    #developers .carousel-img::before,
+    #developers .carousel-img::after {
+        position: absolute;
+        top: 50%;
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        font-size: 20px;
+    }
+
+    #developers .carousel-img::before {
+        content: '\f060';
+        right: 100%;
+        color: #7a87a3;
+    }
+
+    #developers .carousel-img::after {
+        content: '\f061';
+        left: 100%;
+        color: #3f5179;
     }
 }
