@@ -401,6 +401,13 @@ p.caption {
     color: #1633ff;
 }
 
+.city-row {
+    margin: 0 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid hsla(0,0%,100%,0.2);
+}
+
 .code, .city, .test-speed {
     line-height: 30px;
 }
@@ -439,13 +446,7 @@ a.test-speed::after {
     margin-left: 5px;
 }
 
-.az_pad-bor {
-    padding-top: 5px;
-    padding-bottom: 5px;
-    border-bottom: 1px solid hsla(0,0%,100%,0.2);
-}
-
-.az_pad-bor:last-of-type {
+#bandwidth .col-xs-6:last-of-type .city-row {
     border: none;
 }
 
@@ -633,6 +634,7 @@ a.test-speed::after {
         padding-left: 15px;
         padding-right: 15px;
     }
+
     /* PADDING FIXING ON BANNER */
     #heading {
         padding: 5em 0;
@@ -680,6 +682,7 @@ a.test-speed::after {
         border-left: 3px solid #0069ff;
         padding-left: 15px;
     }
+
     /* FOOTER BOTTOM */
     .list h6 {
         padding: 0;
@@ -734,6 +737,7 @@ a.test-speed::after {
         right: 0;
         color: #3f5179;
     }
+
     /* BUSINESS TEXT-ALIGN */
     #business:not(#business h2) {
         text-align: left;
@@ -747,14 +751,13 @@ a.test-speed::after {
         height: 160px;
         margin-bottom: 35px;
     }
+
     /* BANDWIDTH BORDERS */
-    .az_pad-bor:last-of-type {
-        border-bottom: 1px solid hsla(0,0%,100%,0.2);
+    #bandwidth .col-xs-6:nth-last-of-type(1) .city-row,
+    #bandwidth .col-xs-6:nth-last-of-type(2) .city-row {
+        border-bottom: 1px solid transparent;
     }
 
-    .az_pad-bor:nth-last-of-type(2) {
-        border-bottom: opacity: 1;
-    }
     /* #create-account FIXING */
     #create-account {
         padding-top: 5em;
